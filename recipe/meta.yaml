@@ -25,12 +25,10 @@ build:
 requirements:
   build:
     - {{posix}}zip               # [win]
-
   host:
     - r-base
     - r-rstudioapi >=0.7
     - r-svgui >=1.0.0
-
   run:
     - r-base
     - r-rstudioapi >=0.7
