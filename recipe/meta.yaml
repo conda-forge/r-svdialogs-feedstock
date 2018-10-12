@@ -1,4 +1,4 @@
-{% set version = '0.9-57' %}
+{% set version = '1.0.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -10,38 +10,46 @@ package:
 source:
   fn: svDialogs_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/svDialogs_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/svDialogs/svDialogs_{{ version }}.tar.gz
-  sha256: 994af3188f37ebdbf23a814ae1b9d6f4a7cbdf02295f68e5a84a9e8f7f8d96e3
+    - {{ cran_mirror }}/src/contrib/svDialogs_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/svDialogs/svDialogs_{{ version }}.tar.gz
+  sha256: 275d805627d85ef16b00ffd548ec466357b6f8f2119735099adc72e59abf1777
 
 build:
+  merge_build_host: True  # [win]
   number: 0
-  skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
+
+# Suggests: covr, knitr, testthat
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
-    - r-svgui >=0.9_52
-
+    - r-rstudioapi >=0.7
+    - r-svgui >=1.0.0
   run:
     - r-base
-    - r-svgui >=0.9_52
+    - r-rstudioapi >=0.7
+    - r-svgui >=1.0.0
 
 test:
   commands:
-    - $R -e "library('svDialogs')"  # [not win]
+    - $R -e "library('svDialogs')"           # [not win]
     - "\"%R%\" -e \"library('svDialogs')\""  # [win]
 
 about:
-  home: http://www.sciviews.org/SciViews-R
+  home: https://github.com/SciViews/svDialogs, http://www.sciviews.org/SciViews-R
   license: GPL-2
-  summary: Rapidly construct dialog boxes for your GUI, including an automatic function assistant
+  summary: Rapidly construct standard dialog boxes for your GUI, including  message boxes, input
+    boxes, list, file or directory selection, ... In case R cannot display GUI dialog
+    boxes, a simpler command line version of these interactive elements is also provided
+    as fallback solution.
   license_family: GPL2
 
 extra:
   recipe-maintainers:
+    - dpryan79
     - johanneskoester
     - bgruening
