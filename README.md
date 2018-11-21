@@ -1,22 +1,21 @@
 About r-svdialogs
 =================
 
-Home: http://www.sciviews.org/SciViews-R
+Home: https://github.com/SciViews/svDialogs, http://www.sciviews.org/SciViews-R
 
 Package license: GPL-2
 
 Feedstock license: BSD 3-Clause
 
-Summary: Rapidly construct dialog boxes for your GUI, including an automatic function assistant
+Summary: Rapidly construct standard dialog boxes for your GUI, including  message boxes, input boxes, list, file or directory selection, ... In case R cannot display GUI dialog boxes, a simpler command line version of these interactive elements is also provided as fallback solution.
 
 
 
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-svDialogs-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-svDialogs-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-svDialogs-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-svDialogs-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-svDialogs-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-svDialogs-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-svdialogs-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-svdialogs-feedstock)
 
 Current release info
 ====================
