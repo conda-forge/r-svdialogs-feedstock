@@ -1,4 +1,4 @@
-{% set version = '1.0.0' %}
+{% set version = "1.0.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -16,7 +16,7 @@ source:
 
 build:
   noarch: generic
-  number: 1001
+  number: 1002
   rpaths:
     - lib/R/lib/
     - lib/
@@ -39,13 +39,12 @@ test:
 
 about:
   home: https://github.com/SciViews/svDialogs, http://www.sciviews.org/SciViews-R
-  license: GPL-2
-  summary: Rapidly construct standard dialog boxes for your GUI, including  message boxes, input
-    boxes, list, file or directory selection, ... In case R cannot display GUI dialog
-    boxes, a simpler command line version of these interactive elements is also provided
-    as fallback solution.
+  license: GPL-2.0-only
+  summary: Rapidly construct standard dialog boxes for your GUI, including  message boxes, input boxes, list, file or directory selection, ... In case R cannot display GUI dialog boxes, a simpler command line version of these interactive elements is also provided as fallback solution.
   license_family: GPL2
 
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 extra:
   recipe-maintainers:
     - conda-forge/r
