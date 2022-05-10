@@ -1,4 +1,4 @@
-{% set version = "1.0.3" %}
+{% set version = "1.1.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/svDialogs_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/svDialogs/svDialogs_{{ version }}.tar.gz
-  sha256: 6110850106d6c625a4f76b0f22dadd69e524a4dff033447214296d3eb7ec0048
+  sha256: 2ecab7e6ade510f9df9665308cf1b222bcef3bd5db8bd9ea204b81a8e92b6a7c
 
 build:
   noarch: generic
