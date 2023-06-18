@@ -1,11 +1,11 @@
-About r-svdialogs
-=================
+About r-svdialogs-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-svdialogs-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/SciViews/svDialogs, http://www.sciviews.org/SciViews-R
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-svdialogs-feedstock/blob/main/LICENSE.txt)
 
 Summary: Rapidly construct standard dialog boxes for your GUI, including  message boxes, input boxes, list, file or directory selection, ... In case R cannot display GUI dialog boxes, a simpler command line version of these interactive elements is also provided as fallback solution.
 
