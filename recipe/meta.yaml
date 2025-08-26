@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/svDialogs_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/svDialogs/svDialogs_{{ version }}.tar.gz
-  sha256: 2ecab7e6ade510f9df9665308cf1b222bcef3bd5db8bd9ea204b81a8e92b6a7c
+  sha256: 8790e734b851a4c74953b5af2e451ec35bdb1f3e68b0dfe13e0fb03577cd671d
 
 build:
   noarch: generic
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
